@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acreo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.35.0/tabler-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.24/dist/sweetalert2.min.css">
+</head>
+<body class="homeBody" id="homeSCroll">
+    <header class="main-header">
+        <div class="logo">
+            <a href="#homeSCroll" class="headTitle"><strong>Acreo</strong></a>
+            <p>Your space awaits</p>
+        </div>
+        <nav>
+            <ul class="nav-items">
+                <li class="cardPortal">
+                    <a href="#aboutScroll"><strong>About Acreo</strong></a>
+                    <p class="nav-desc">Learn more about Acreo</p>
+                </li>
+                <li class="cardPortal">
+                    <a href="#carScroll"><strong>Find your Agent</strong></a>
+                    <p class="nav-desc">Get in touch with our expert agents</p>
+                </li>
+                <li class="cardPortal">
+                    <a href="sell.html"><strong>Sell / Feature</strong></a>
+                    <p class="nav-desc">Promote your listings</p>
+                </li>
+                <li class="cardPortal">
+                    <a href="list.html"><strong>Marketplace</strong></a>
+                    <p class="nav-desc">Featured Acreo listings</p>
+                </li>
+                <li class="cardPortal" id="auth-ui">
+                    <button class="login-btn" id="myAccBtn"><strong>Login</strong></button>
+                    <div id="simpleModal" class="modal">
+                        <div class="modal-content">
+                            <span class="closeBtn">&times;</span>
+                            <div class="accountCard">
+                                <h1>Account Login</h1>
+                                    <form id="loginForm" class="accountForm">
+                                        <label for="username">Username:</label>
+                                        <input type="text" id="username" name="username" placeholder="Username" required><br>
+                                        <label for="password">Password:</label>
+                                        <input type="password" id="password" name="password" placeholder="Password" required><br>
+                                        <button class="Logbtn-Primary">Login</button>
+                                    </form>
+                                <a href="register.html">Don't have an account? Register here</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home">
+        <img src="logo.png" alt="ACREO logo" class="logoAcreo">
+        <div class="number1"><h1>The #1 site real estate professionals trust*</h1></div>
+        <div class="search-container">
+            <input type="text" placeholder="Search for luxury plots, neighborhoods, or sellers...">
+            <button type="submit"><strong><i class="ti ti-search"></i> Search</strong></button>
+        </div>
+    </main>
+
+    <div class="ibangdiv">
+        <div class="cardHList">
+            <div class="cardHome">
+                <h2>Verified Sellers</h2>
+                <p>Check out our legit and trustworthy clients</p>
+            </div>
+            <div class="cardHome">
+                <h2>Luxury Plots</h2>
+                <p>Take in the scenic view</p>
+            </div>
+            <div class="cardHome">
+                <h2>Global Reach</h2>
+                <p>Have our services anywhere in the world</p>
+            </div>
+            <div class="cardHome">
+                <h2>Easy Contact</h2>
+                <p>Email us at support@acreo.com.ph</p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <section class="overviewHome" id="aboutScroll">
+        <section class="overviewIntro">
+            <h1>INTRODUCTION</h1><br>
+            <p>
+                ACREO is a sophisticated digital environment meticulously crafted as the cornerstone of the Web System Technologies 1 final examination, completed under the academic supervision of Mr. Mark Adrianne Salunga. Our architecture is designed to harmonize the complexities of virtual estate management with a user-centric interface, offering an unparalleled venue for the exchange of high-tier digital properties. By leveraging advanced front-end methodologies, ACREO functions as a live case study in scalable web design, ensuring that the intersection of technology and luxury real estate is both accessible and aesthetically profound for every user.
+            </p>
+            <br>
+            <p>
+                Rooted in the principles of modern full-stack development, this platform serves as an innovative response to the evolving needs of digital landowners within the Web System Technologies 1 curriculum guided by Mr. Mark Adrianne Salunga. ACREO prioritizes the security of its verified marketplace while maintaining the visual fluidity required for high-end real estate showcases. Through the strategic implementation of responsive layouts and interactive elements, we have established a framework that not only meets rigorous academic standards but also sets a new benchmark for how property management systems can facilitate growth in an increasingly digital-first economy.
+            </p>
+            <br>
+            <p>
+                Beyond its primary function as a final project for Mr. Mark Adrianne Salunga’s Web System Technologies 1 course, ACREO represents a forward-thinking approach to community-driven digital architecture. The platform is engineered to foster trust between premier creators and discerning investors by providing a streamlined, efficient, and visually captivating environment for plot acquisition. As we continue to refine our technical implementation, ACREO remains dedicated to demonstrating the transformative power of intuitive web standards, ultimately empowering every participant to define their own unique footprint within our expansive and vibrant digital ecosystem.
+            </p>
+        </section>
+        <section class="featured-carousel team-carousel" id="carScroll">
+            <h1 class="section-title">Meet Our Team</h1>
+            <div class="carousel-container">
+                <div class="carousel-slide fade">
+                    <div class="introCard">
+                        <div class="introId">
+                            <img src="profile.jpg" alt="Mr. Ian Albert N. Mariano" class="team-photo">
+                            <h2>Mr. Ian Albert N. Mariano</h2>
+                        </div>
+                        <div class="introDesc">
+                            <h3>CEO of ACREO Plot and Housing Agency</h3>
+                            <p>Mr. Ian Albert N. Mariano serves as the visionary lead and Chief Executive Officer of ACREO. In this capacity, he provided the strategic direction and technical oversight necessary to transform the project's conceptual framework into a functional digital marketplace.</p>
+                            <div class="introData">
+                                <p>19 years experience</p>
+                                <p>78 sales in past year</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="carousel-slide fade">
+                    <div class="introCard">
+                        <div class="introId">
+                            <img src="profile.jpg" alt="Ms. Cris-ann V. Alegria" class="team-photo">
+                            <h2>Ms. Cris-ann V. Alegria</h2>
+                        </div>
+                        <div class="introDesc">
+                            <h3>Realtor®</h3>
+                            <p>As the resident Realtor® for the platform, Ms. Cris-ann V. Alegria was responsible for curating the high-tier digital properties that define the ACREO marketplace. Her expertise in real estate standards ensured that the user experience remained grounded in professional practice.</p>
+                            <div class="introData">
+                                <p>19 years experience</p>
+                                <p>99 sales in past year</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-slide fade">
+                    <div class="introCard">
+                        <div class="introId">
+                            <img src="profile.jpg" alt="Ms. Edna G. Soibat" class="team-photo">
+                            <h2>Ms. Edna G. Soibat</h2>
+                        </div>
+                        <div class="introDesc">
+                            <h3>Assistant Secretary, Salesperson, Consultant, Auctioneer</h3>
+                            <p>Ms. Edna G. Soibat brought a multi-faceted operational approach to the development of ACREO. Serving as the Assistant Secretary and Lead Consultant, she managed the project’s administrative coordination and strategic sales frameworks.</p>
+                            <div class="introData">
+                                <p>19 years experience</p>
+                                <p>67 sales in past year</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="prev-btn">&#10094;</button>
+                <button class="next-btn">&#10095;</button>
+            </div>
+
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <div class="footLeft">
+            <img src="logo.png" alt="ACREO Logo">
+            <div class="memberList">
+                <p>Designed by — Mariano, Ian Albert —</p>
+                <p>Alegria, Cris-Ann —</p>
+                <p>Tabios, Andee — BSIT-12M1</p>
+            </div>
+        </div>
+        <div class="copyR">
+            <p>&copy; 2026 Acreo. All rights reserved.</p>
+            <p>Contact us at contact@acreo.com</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.24/dist/sweetalert2.all.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

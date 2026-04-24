@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acreo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.35.0/tabler-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.24/dist/sweetalert2.min.css">
+</head>
+<body class="dtlBody">
+    <header class="main-header">
+        <div class="logo">
+            <a href="home.html" class="headTitle"><strong>Acreo</strong></a>
+            <p>Your space awaits</p>
+        </div>
+        <nav>
+            <ul class="nav-items">
+                <li class="cardPortal">
+                    <a href="home.html#aboutScroll"><strong>About Acreo</strong></a>
+                    <p class="nav-desc">Learn more about Acreo</p>
+                </li>
+                <li class="cardPortal">
+                    <a href="home.html#carScroll"><strong>Find your Agent</strong></a>
+                    <p class="nav-desc">Get in touch with our expert agents</p>
+                </li>
+                <li class="cardPortal">
+                    <a href="sell.html"><strong>Sell / Feature</strong></a>
+                    <p class="nav-desc">Promote your listings</p>
+                </li>
+                <li class="cardPortal">
+                    <a href="list.html"><strong>Marketplace</strong></a>
+                    <p class="nav-desc">Featured Acreo listings</p>
+                </li>
+                <li class="cardPortal" id="auth-ui">
+                    <button class="login-btn" id="myAccBtn"><strong>Login</strong></button>
+                    <div id="simpleModal" class="modal">
+                        <div class="modal-content">
+                            <span class="closeBtn">&times;</span>
+                            <div class="accountCard">
+                                <h1>Account Login</h1>
+                                    <form id="loginForm" class="accountForm">
+                                        <label for="username">Username:</label>
+                                        <input type="text" id="username" name="username" placeholder="Username" required><br>
+                                        <label for="password">Password:</label>
+                                        <input type="password" id="password" name="password" placeholder="Password" required><br>
+                                        <button class="Logbtn-Primary">Login</button>
+                                    </form>
+                                <a href="register.html">Don't have an account? Register here</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dtlMain">
+        <img src="HA2.PNG" alt="Modern Minecraft house exterior" class="imgDtl">
+        <div class="cardDtl">
+            <h1 class="cTitle">Hillside Abode</h1>
+            <p class="descDtl">Architectural ingenuity meets rugged terrain. This hillside retreat offers tiered living spaces integrated directly into the landscape, providing unmatched panoramic views of the valley below and a unique, secure vertical living experience.</p>
+            <div class="infoDtl">
+                <p><b>Plot Owner: </b>Anonymous</p>
+                <p><b>Price: </b>6 to 7 Shulker Boxes of Gold (Negotiable)</p>
+                <p><b>Address: </b>Hillside Retreat, overlooking the valley</p>
+                <p><b>Contact Number: </b>(01) 23-456-7891</p>
+            </div>
+            <div class="cFoot">
+                <button class="btn-Primary inquireBtn" onclick="showAlert()">Inquire About</button>
+                <script>
+                    function showAlert() {
+                        Swal.fire({
+                            title: "Inquire about this plot?",
+                            text: "This will send a message to the seller.",
+                            icon: "question",
+                            showCancelButton: true,
+                            confirmButtonColor: "#3085d6",
+                            cancelButtonColor: "#d33",
+                            confirmButtonText: "Yes, inquire!"
+                            }).then((result) => {
+                            if (result.isConfirmed) Swal.fire({
+                                title: "Inquiry sent!",
+                                text: "Your message has been sent to the seller.",
+                                icon: "success"
+                            });
+                        });
+                    }
+                </script>
+
+                <a href="list.html" class="btn-Secondary">Return</a>
+            </div>
+        </div>
+
+        <section class="featured-carousel team-carousel" id="carScroll">
+            <h1 class="section-title2">Screenshots</h1>
+            <div class="carousel-container">
+                <div class="carousel-slide fade">
+                    <img src="HA1.PNG" alt="Screenshot 1" class="dtlSS">
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="HA2.PNG" alt="Screenshot 2" class="dtlSS">
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="HA3.PNG" alt="Screenshot 3" class="dtlSS">
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="HA4.PNG" alt="Screenshot 4" class="dtlSS">
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="HA5.PNG" alt="Screenshot 5" class="dtlSS">
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="HA6.PNG" alt="Screenshot 6" class="dtlSS">
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="HA7.PNG" alt="Screenshot 7" class="dtlSS">
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="HA8.PNG" alt="Screenshot 8" class="dtlSS">
+                </div>
+
+                <button class="prev-btn">&#10094;</button>
+                <button class="next-btn">&#10095;</button>
+            </div>
+
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footLeft">
+            <img src="logo.png" alt="ACREO Logo">
+            <div class="memberList">
+                <p>Designed by — Mariano, Ian Albert —</p>
+                <p>Alegria, Cris-Ann —</p>
+                <p>Tabios, Andee — BSIT-12M1</p>
+            </div>
+        </div>
+        <div class="copyR">
+            <p>&copy; 2026 Acreo. All rights reserved.</p>
+            <p>Contact us at contact@acreo.com</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.24/dist/sweetalert2.all.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

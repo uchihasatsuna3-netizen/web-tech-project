@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acreo - My Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.35.0/tabler-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.24/dist/sweetalert2.min.css">
+</head>
+<body class="profBody">
+    <header class="main-header">
+        <div class="logo">
+            <a href="home.html" class="headTitle"><strong>Acreo</strong></a>
+            <p>Your space awaits</p>
+        </div>
+        <nav>
+            <ul class="nav-items">
+                <li class="cardPortal">
+                    <a href="home.html#aboutScroll"><strong>About Acreo</strong></a>
+                    <p class="nav-desc">Learn more about Acreo</p>
+                </li>
+                <li class="cardPortal">
+                    <a href="home.html#carScroll"><strong>Find your Agent</strong></a>
+                    <p class="nav-desc">Get in touch with our expert agents</p>
+                </li>
+                <li class="cardPortal">
+                    <a href="sell.html"><strong>Sell / Feature</strong></a>
+                    <p class="nav-desc">Promote your listings</p>
+                </li>
+                <li class="cardPortal">
+                    <a href="list.html"><strong>Marketplace</strong></a>
+                    <p class="nav-desc">Featured Acreo listings</p>
+                </li>
+                <li class="cardPortal"><button class="login-btn" id="logoutBtn"><strong>Logout</strong></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="profileBanner">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-photo">
+            <p>Member of the Acreo Digital Estate Marketplace.</p>
+        </div>
+        <div class="profileCard">
+            <h1>Account Informations</h1>
+            <div id="profileDisplay" class="profileInfo">
+                <p><strong>Username:</strong> <span id="profUser">---</span></p>
+                <p><strong>Email:</strong> <span id="profEmail">---</span></p>
+                <p><strong>Birthdate:</strong> <span id="profBirthdate">---</span></p>                
+            </div>
+            <a href="home.html" class="btn-Primary" style="display: inline-block; padding: 10px 20px;">Back to Home</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footLeft">
+            <img src="logo.png" alt="ACREO Logo">
+            <div class="memberList">
+                <p>Designed by — Mariano, Ian Albert —</p>
+                <p>Alegria, Cris-Ann —</p>
+                <p>Tabios, Andee — BSIT-12M1</p>
+            </div>
+        </div>
+        <div class="copyR">
+            <p>&copy; 2026 Acreo. All rights reserved.</p>
+            <p>Contact us at contact@acreo.com</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.24/dist/sweetalert2.all.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

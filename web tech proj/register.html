@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acreo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.35.0/tabler-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.24/dist/sweetalert2.min.css">
+</head>
+<body class="regBody">
+    <header class="main-header">
+        <div class="logo">
+            <a href="home.html" class="headTitle"><strong>Acreo</strong></a>
+            <p>Your space awaits</p>
+        </div>
+        <nav>
+            <ul class="nav-items">
+                <li class="cardPortal">
+                    <a href="home.html#aboutScroll"><strong>About Acreo</strong></a>
+                    <p class="nav-desc">Learn more about Acreo</p>
+                </li>
+                <li class="cardPortal">
+                    <a href="home.html#carScroll"><strong>Find your Agent</strong></a>
+                    <p class="nav-desc">Get in touch with our expert agents</p>
+                </li>
+                <li class="cardPortal">
+                    <a href="sell.html"><strong>Sell / Feature</strong></a>
+                    <p class="nav-desc">Promote your listings</p>
+                </li>
+                <li class="cardPortal">
+                    <a href="list.html"><strong>Marketplace</strong></a>
+                    <p class="nav-desc">Featured Acreo listings</p>
+                </li>
+                <li class="cardPortal" id="auth-ui">
+                    <button class="login-btn" id="myAccBtn"><strong>Login</strong></button>
+                    <div id="simpleModal" class="modal">
+                        <div class="modal-content">
+                            <span class="closeBtn">&times;</span>
+                            <div class="accountCard">
+                                <h1>Account Login</h1>
+                                    <form id="loginForm" class="accountForm">
+                                        <label for="username">Username:</label>
+                                        <input type="text" id="username" name="username" placeholder="Username" required><br>
+                                        <label for="password">Password:</label>
+                                        <input type="password" id="password" name="password" placeholder="Password" required><br>
+                                        <button class="Logbtn-Primary">Login</button>
+                                    </form>
+                                <a href="register.html">Don't have an account? Register here</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="regMain">
+        <div class="accountRegCard">
+            <h1>Account Registration</h1>
+            <form id="registerForm" class="accountRegForm">
+                <label for="regUsername">Username:</label>
+                <input type="text" id="regUsername" name="username" placeholder="Username" required><br>
+                
+                <label for="regEmail">E-mail: (Optional)</label>
+                <input type="email" id="regEmail" name="email" placeholder="acreo@example.com"><br>
+
+                <label for="regBirthdate">Birthdate: (Optional)</label>
+                <input type="date" id="regBirthdate" name="birthdate"><br>
+                
+                <label for="regPassword">Password:</label>
+                <input type="password" id="regPassword" name="password" placeholder="Password" required><br>
+                
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required><br>
+                
+                <input type="submit" value="Register" class="btn-Primary">
+            </form>
+            <a class="regA" style="cursor: pointer;" onclick="document.getElementById('simpleModal').style.display='block'">Already have an account? Login here</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footLeft">
+            <img src="logo.png" alt="ACREO Logo">
+            <div class="memberList">
+                <p>Designed by — Mariano, Ian Albert —</p>
+                <p>Alegria, Cris-Ann —</p>
+                <p>Tabios, Andee — BSIT-12M1</p>
+            </div>
+        </div>
+        <div class="copyR">
+            <p>&copy; 2026 Acreo. All rights reserved.</p>
+            <p>Contact us at contact@acreo.com</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.24/dist/sweetalert2.all.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

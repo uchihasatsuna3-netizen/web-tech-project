@@ -1,0 +1,1529 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #efbebe;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: #FCF8F8;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.main-header {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    background-color: #db9cbe17;
+    justify-content: space-between;
+    color: #ffffff;
+    width: 100%;
+    padding: 18px;
+    align-items: center;
+    gap: 5px;
+    transition: padding 0.5s ease;
+}
+
+.main-header {
+    transition: background-color 0.5s ease, padding 0.5s ease;
+}
+
+.main-header.scrolled {
+    background-color: #d48298; /* Your solid pink */
+    padding: 12px 18px; /* Slightly shrinks for a cool effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.main-header:hover {
+    padding: 25px 18px;
+}
+
+.main-header ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+@keyframes titleColor {
+    0%   {color: #FCF8F8;}
+    50%  {color: #FBEFEF;}
+    100% {color: #F9DFDF;}
+}
+.headTitle {
+    border: none;
+    background-color: #b0db9c00;
+    color: #FCF8F8;
+    font-size: 32px;
+    animation: titleColor 2s infinite alternate;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: #f5b2b2;
+    height: 450px;
+    width: 350px;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+.cTitle {
+    display: flex;
+    background-color: #f5afaf98;
+    color: #FCF8F8;
+    border-radius: 10px 10px 0px 0px;
+    height: 1.5em;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    padding-left: 10px;
+}
+
+.card img {
+    display: block;
+    width: 300px;
+    height: 170px;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+    object-fit: cover;
+}
+
+.card img:hover {
+    transform: scale(1.015);
+}
+
+.card p {
+    padding: 0px 25px;
+    text-align: justify;
+}
+
+.cFoot {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: end;
+    align-items: end;
+    margin: 10px 40px 20px 0px;
+    gap: 5px;
+}
+
+.btn-Primary {
+    background-color: #F5AFAF;
+    color: #FCF8F8;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 12px;
+    font-size: 18px;
+    transition: scale 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-Primary:hover {
+    scale: 1.04;
+    background-color: #e19191;
+}
+
+.btn-Primary:active {
+    scale: 1;
+    background-color: #ffd6d6;
+}
+
+.btn-Secondary {
+    background-color: #F9DFDF;
+    color: #FCF8F8;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 12px;
+    font-size: 18px;
+    transition: scale 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-Secondary:hover {
+    scale: 1.04;
+    background-color: #e19191;
+}
+
+.btn-Secondary:active {
+    scale: 1;
+    background-color: #ffd6d6;
+}
+
+.favBtn {
+    background-color: #F9DFDF;
+    color: #FCF8F8;
+    border: none;
+    border-radius: 100px;
+    padding: 0px 10px;
+    font-size: 30px;
+    transition: scale 0.2s ease, background-color 0.2s ease;
+}
+
+.favBtn:hover {
+    scale: 1.1;
+    background-color: #e19191;
+}
+
+.favBtn:active {
+    scale: 1;
+    background-color: #ffd6d6;
+}
+
+.dtlMain {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: end;
+    margin-top: 80px;
+}
+
+.imgDtl {
+    display: block;
+    width: 45%;
+    height: 380px;
+    border: none;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.imgDtl:hover {
+    transform: scale(1.02);
+}
+
+.cardDtl {
+    display: flex;
+    flex-direction: column;
+    background-color: #FCF8F8;
+    color: #F3B6BF;
+    height: 380px;
+    width: 45%;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cardDtl:hover {
+    transform: scale(1.02);
+}
+
+.descDtl {
+    display: flex;
+    padding: 10px 20px;
+    text-align: justify;
+    line-height: 20px;
+}
+
+.infoDtl {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    line-height: 30px;
+    background-color: #FCF8F8;
+    border: 1px solid #F3B6BF;
+    border-radius: 10px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.homeBody {
+    height: 100vh;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://a.storyblok.com/f/296405/1920X1080/85c8f43648/cherry-blossom-grove-in-minecraft.jpg');
+}
+
+.home {
+    height: 100%;
+    min-height: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    margin-top: 75px;
+}
+
+.cardHList {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.cardHome {
+    display: flex;
+    flex-direction: column;
+    color: #FCF8F8;
+}
+
+.number1 {
+    display: flex;
+    flex-direction: column;
+    color: #FCF8F8;
+}
+
+.ibangdiv {
+    display: flex;
+    flex-direction: row;
+    background-color: #db9cbe4f;
+    min-height: 110px;
+    color: #B0DB9C;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardPortal a {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    color: #FCF8F8;
+    font-size: 20px;
+}
+
+.cardPortal p {
+    font-size: 15px;
+}
+
+.cardPortal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FCF8F8;
+    font-size: 24px;
+
+}
+
+.intro-main {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 67px;
+}
+
+.introCard {
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    height: 300px;
+    color: #2d3436c5;
+    background-color: #fafafa; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); 
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 20px 30px;
+    margin-top: 20px;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+
+.introCard:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+.introCard p {
+    margin-top: 10px;
+}
+
+.introTitle {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 18em;
+    color: #FCF8F8;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://a.storyblok.com/f/296405/1920X1080/85c8f43648/cherry-blossom-grove-in-minecraft.jpg');
+    clip-path: polygon(0 0, 100% 0, 100% 67%, 50% 100%, 0 67%);
+}
+
+.introTitle h1 {
+    font-size: 45px;
+    margin: auto;
+}
+
+.team-photo {
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: solid 2px #1a1a1a7e;
+    margin: 0 auto 15px auto;
+    display: block;
+}
+
+.aboutAcreo {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 500px;
+    background-color:  #f5b2b2;
+    color: #2d3436c5;
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+.aboutAcreo h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-main {
+    text-align: center;
+    padding: 0px 20px;
+    margin: 100px;
+}
+
+.accountRegCard {
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto;
+    background-color: #ffefefe0;
+    padding: 20px;
+    padding-top: 30px;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+/*.accountCard {
+    display: flex;
+    flex-direction: column;
+    margin: 80px auto;
+    background-color: white;
+    padding: 20px;
+    padding-top: 30px;
+}*/
+
+.accountCard h1 {
+    font-size: 40px;
+}
+
+.accountCard a, .accountRegCard a {
+    color: #aaa;
+    font-size: 15px;
+    justify-content: center;
+    padding-top: 10px;
+    transition: color 0.2s ease;
+    cursor: pointer;
+}
+
+.accountCard a:hover, .accountRegCard a:hover {
+    color: #808080;
+}
+
+.accountCard label {
+    font-size: 18px;
+}
+
+.accountCard input {
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.Logbtn-Primary {
+    background-color: #e7a1b4;
+    color: #FCF8F8;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 12px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.Logbtn-Primary:hover {
+    background-color: #d48298;
+}
+
+.accountForm {
+    display: flex;
+    flex-direction: column;
+}
+
+/* The Background Overlay */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 100; /* Sits on top of everything */
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.6); /* Semi-transparent black */
+}
+
+/* The Actual Pop-up Box */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    color: #2d3436c5;
+    background-color: #fafafa; 
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 20px 32px;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin: 100px auto;
+}
+
+/* The "X" Close Button */
+.closeBtn {
+    display: flex;
+    justify-content: end;
+    color: #aaa;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: -5px;
+}
+
+/* Styling for the Login Button */
+.login-btn {
+  background-color: #e7a1b4;
+  color: #ffff; /* Matching your header text color */
+  font-size: 18px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.login-btn:hover {
+  opacity: 0.8;
+}
+
+/* Styling for the Profile Image */
+.profile-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.search-container {
+    display: flex;
+    width: 100%;
+    max-width: 600px; /* Limits how wide the bar gets */
+    background: rgba(255, 255, 255, 0.2); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 50px; /* Rounded pill shape */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: searchPulse 4s infinite ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+.search-container input {
+    flex: 1; /* Takes up all available space */
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+}
+
+.search-container input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@keyframes searchPulse {
+    0% { border-color: rgba(255, 255, 255, 0.3); box-shadow: 0 0 0px rgba(235, 156, 176, 0); }
+    50% { border-color: rgba(235, 156, 176, 0.6); box-shadow: 0 0 15px rgba(235, 156, 176, 0.2); }
+    100% { border-color: rgba(255, 255, 255, 0.3); box-shadow: 0 0 0px rgba(235, 156, 176, 0); }
+}
+
+.search-container:focus-within {
+    transform: scale(1.02); /* Slightly grows when you click it */
+}
+
+.search-container button {
+    background-color: #eb9cb0; /* Matching your pink theme */
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    padding-left: 21px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+    background-color: #d48a9d;
+}
+
+.overviewHome {
+    width: 100%;
+    height: 1350px; /* Force it to be long for testing */
+    padding: 100px 0px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.4); /* Makes text readable over the bg */
+    backdrop-filter: blur(5px);
+    color: white;
+}
+
+.overviewIntro {
+    padding: 0px 50px;
+}
+
+.overviewHome h1 {
+    /* background: rgba(0, 0, 0, 0.5); */
+    backdrop-filter: blur(8px);    /* Blurs the trees behind the text */
+    padding:50px;
+    color: white;
+    text-align: center;
+    margin-top: -50px;
+}
+
+.overviewHome p {
+    text-align: justify; /* Makes the edges of the paragraphs straight */
+    line-height: 1.6;    /* Adds a bit of space between lines for readability */
+    margin: 0px 50px;
+    margin-bottom: 25px;
+}
+
+.logoAcreo {
+    width: 500px;
+    margin: -80px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+.nav-desc {
+    display: block;
+    font-size: 0.75rem; /* Smaller size for the subtext */
+    opacity: 1;
+    max-height: 20px;   /* Set a max-height for the collapse effect */
+    transition: opacity 0.5s ease, max-height 0.5s ease, margin 0.5s ease;
+}
+
+/* 2. Hide descriptions when header is scrolled */
+.main-header.scrolled .nav-desc {
+    opacity: 0;
+    max-height: 6px;
+    margin: 0;
+    overflow: hidden;   /* Prevents text from peeking out */
+    pointer-events: none; 
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers title and subtext together */
+}
+
+.loadContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 55%;
+    height: 40px;
+    background-color: #cf86b793;
+    border-radius: 50px;
+    
+}
+
+.loadBar {
+    animation: loadColor 4s ease-in-out forwards;
+    display: flex;
+    align-items: flex-start;
+    width: 0%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+@keyframes loadColor {
+    0%   {
+        background-color: #FCF8F8;
+        width: 0%;
+        }
+    20%  {
+        background-color: #FCF8F8;
+        width: 20%;
+        }
+    40%  {
+        background-color: #FCF8F8;
+        width: 40%;
+        }
+    60%  {
+        background-color: #FBEFEF;
+        width: 60%;
+        }
+    85% {
+        background-color: #F9DFDF;
+        width: 100%;
+        }
+    100% {
+        background-color: #F9DFDF;
+        width: 100%;
+        }
+}
+
+.indexMain {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    animation: loadOpc 4s ease-in-out forwards;
+}
+
+.indexBody {
+    animation: loadIndex 4s ease-in-out forwards; 
+    background-color: #F3B6BF;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes loadIndex {
+    0%   {
+        background-color: #F3B6BF;
+        }
+    90%   {
+        background-color: #F3B6BF;
+        }
+    100% {
+        background-color: #ffffff;
+        }
+}
+
+@keyframes loadOpc {
+    0%   {
+        opacity: 100%;
+        scale: 1;
+        }
+    90%   {
+        opacity: 100%;
+        scale: 1;
+        }
+    100% {
+        opacity: 0;
+        scale: 1.2;
+        }
+}
+
+.listBody {
+    height: 100vh;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffedf0;
+}
+
+.introId {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+.introDesc {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    text-align: justify;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.introDesc p {
+    margin: 10px;
+}
+
+.introDesc h3 {
+    text-align: start;
+}
+
+.introData {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: end;
+}
+
+.listMain {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 35px;
+    grid-row-gap: 0px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+.featured-carousel {
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 100%; /* Adjust to match your grid's max-width */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.carousel-slide {
+    display: none; /* We'll show the active one with JS */
+    width: 100%;
+    height: 350px; /* High-impact height */
+}
+
+.carousel-slide .listImg:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+.carousel-slide .listImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* .carousel-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: rgba(235, 156, 176, 0.9);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+} */
+
+/* Navigation Arrows */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(112, 112, 112, 0.397);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 20px;
+    cursor: pointer;
+    height: 90%;
+    transition: 0.3s;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background: rgba(235, 156, 176, 0.5);
+}
+
+.prev-btn {
+    left: 0px;
+}
+.next-btn {
+    right: 0px;
+}
+
+.section-title {
+    color: white;
+    margin: 0px 50px;
+    margin-top: -50px;
+}
+
+.section-title1 {
+    color: white;
+}
+
+.section-title2 {
+    color: white;
+    margin: 0px 50px;
+    margin-top: -70px;
+}
+
+.logoWm {
+    scale: 0.5;
+    position: absolute;
+    bottom: -120px;
+    left: -225px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+/* .dot-container {
+    text-align: center;
+    padding: 15px 0;
+} */
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.4); /* Inactive state */
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease, transform 0.3s ease;
+}
+
+/* Active dot or dot on hover */
+.dot.active, .dot:hover {
+    background-color: #eb9cb0;
+    transform: scale(1.2);
+}
+
+/* --- TEAM CAROUSEL 3D LAYOUT --- */
+.team-carousel .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* Wider to accommodate side cards */
+    height: 400px; /* Fixed height to hold absolute elements */
+    margin: 0 auto;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-carousel .carousel-slide {
+    position: absolute;
+    width: 60%; /* Width of the active card */
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out, z-index 0.6s ease-in-out;
+    opacity: 0;
+    z-index: 0;
+    visibility: hidden;
+    /* Override any inline display:none from old JS */
+    display: flex !important; 
+}
+
+/* --- ACTIVE & ADJACENT SLIDE STATES --- */
+.team-carousel .carousel-slide.active {
+    opacity: 1;
+    z-index: 3;
+    transform: translateX(0) scale(1);
+    visibility: visible;
+}
+
+.team-carousel .carousel-slide.prev {
+    opacity: 0.5;
+    z-index: 2;
+    transform: translateX(-45%) scale(0.85); /* Moves left and shrinks */
+    visibility: visible;
+    cursor: pointer; /* Suggests it can be clicked */
+}
+
+.team-carousel .carousel-slide.next {
+    opacity: 0.5;
+    z-index: 2;
+    transform: translateX(45%) scale(0.85); /* Moves right and shrinks */
+    visibility: visible;
+    cursor: pointer;
+}
+
+/* Refine the inner card to look good in this layout */
+/* .carousel-slide .introCard {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-radius: 15px;
+    background-color: #fafafa;
+    border: none;
+} */
+
+/* Ensure buttons sit above the cards */
+.team-carousel .prev-btn, .team-carousel .next-btn {
+    z-index: 10; 
+}
+
+.regBody {
+    min-height: 100vh;
+}
+
+.carouselBG {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('test1.jpg');
+}
+
+.accountRegForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.accountRegForm button, .accountRegForm input {
+    width: 100%;
+}
+
+.accountRegForm input {
+    border-radius: 20px;
+    padding: 8px;
+}
+
+.accountRegForm label {
+    margin-bottom: 5px;
+}
+
+.dtlBody {
+    background-color: #e5c6ca;
+}
+
+.dtlSS {
+    width: 100%;
+    object-fit: cover;
+}
+
+.sellForm{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: column;
+    justify-content: center;
+    width: 80%;
+    gap: 15px;
+    padding-top: 20px;
+}
+
+.sellFormFields {
+    display: flex;
+    flex-direction: column;
+}
+
+.sellFormFields input, .sellFormFields textarea {
+    width: 100%;
+    border-radius: 20px;
+    padding: 8px;
+}
+
+.sellFormFields textarea {
+    resize: vertical; /* Allows vertical resizing */
+    min-height: 100px; /* Sets a minimum height for the textarea */
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #d48298;
+    color: #FCF8F8;
+    gap: 5px;
+    position: relative;
+}
+
+ .regMain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('logoBg.png');
+}
+
+.ti-circle-plus {
+    font-size: 150px;
+    color: #F9DFDF;
+    transition: scale 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardsell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.645);
+}
+
+.cardsell:hover .ti-circle-plus, .cardsell:hover p {
+    scale: 1.02;
+    color: #e19191;
+}
+
+.cardsell p {
+    color: #F9DFDF;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: scale 0.2s ease, color 0.2s ease;
+}
+
+.memberList {
+    display: flex;
+    flex-direction: row;
+    gap: 6.7px;
+    animation: titleColor 2s infinite alternate;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileBanner {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('test1.jpg');
+    width: 100%;
+    height: 325px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    flex-direction: column;
+}
+
+.profileBanner p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    color: #fafafa;
+    margin-bottom: -12.5px;
+}
+
+.profile-photo {
+    border-radius: 500px;
+    width: 180px;
+    margin-bottom: 12.5px;
+}
+
+.profileCard {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profileCard .btn-Primary {
+    text-align: center;
+}
+
+.profileCard h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+.profBody {
+    background-color: #fafafa;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fileDes {
+    margin-bottom: 10px;
+}
+
+.regLogo {
+    width: 350px;
+}
+
+.regLogoCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -10px 0px 10px 0px
+}
+
+.sellFormFields h2 {
+    margin-bottom: 10px;
+}
+
+.copyR {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.footLeft img {
+    width: 100px;
+    margin: -10px 0px;
+}
+
+.footLeft {
+    display: flex;
+}
+
+.nav-desc1 {
+    display: flex;
+    justify-content: center;
+}
+
+/* Ensure SweetAlert popups sit above all other elements (modals, headers) */
+.swal2-container {
+    z-index: 10000 !important;
+}
+
+/* media queries */
+
+@media (max-width: 768px) {
+    .listMain {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .carousel-slide {
+        height: 250px;
+    }
+
+    .logoWm {
+        bottom: -90px;
+        left: -135px;
+    }
+
+    footer {
+        flex-direction: column-reverse;
+        padding: 20px 0px;
+    }
+
+    .team-carousel .carousel-container {
+        height: 300px;
+    }
+
+    .nav-desc {
+        display: none !important;
+    }
+
+    .cardPortal a {
+        font-size: 12.5px;
+    }
+
+    .logo p {
+        font-size: 12.5px;
+    }
+
+    .login-btn {
+        scale: 0.8;
+    }
+
+    .cardHome h2{
+        font-size: 18px;
+    }
+
+    .cardHome p {
+        font-size: 11px;
+    }
+
+    .cardHList {
+        gap: 20px;
+    }
+
+    .ibangdiv {
+        min-height: 80px;
+    }
+
+    .logoAcreo {
+        width: 400px;
+    }
+
+    .number1 h1 {
+        font-size: 25px;
+    }
+
+    .search-container {
+        padding: 5px;
+    }
+
+    .search-container button {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+
+    .overviewHome {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .introCard {
+        width: 500px;
+        height: 200px;
+    }
+
+    .introId h2 {
+        font-size: 18px;
+    }
+
+    .introDesc {
+        gap: 0px
+    }
+
+    .introDesc h3 {
+        font-size: 15px;
+    }
+
+    .introDesc p {
+        font-size: 11.5px;
+    }
+
+    .introData {
+        display: none;
+    }
+
+    .overviewHome h1 {
+        padding: 0px;
+    }
+
+    .overviewHome .featured-carousel {
+        margin: 50px 0px;
+    }
+
+    .home {
+        min-height: 370px;
+    }
+
+    .ibangdiv {
+        margin-bottom: 50px;
+    }
+
+    .introTitle h1 {
+        font-size: 35px;
+    }
+
+    .regLogo {
+        width: 290px;
+    }
+
+    .modal-content {
+        scale: 0.8;
+    }
+
+    .accountCard a {
+        font-size: 15px;
+    }
+
+    .regMain {
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('test2.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    .profile-img {
+        width: 36.7px;
+        height: 36.7px;
+    }
+
+    .cardPortal p {
+        font-size: 12.5px;
+    }
+
+    /* .overviewHome {
+        height: 1400px;
+    } */
+
+    .profileCard {
+        width: 50%;
+    }
+
+    .profileCard h1 {
+        font-size: 28px;
+    }
+
+    .profileInfo p {
+        font-size: 17.5px;
+    }
+
+    .profileCard .btn-Primary {
+        width: 80%;
+        align-self: center;
+    }
+
+    .dtlMain {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imgDtl, .cardDtl {
+        height: 300px;
+        width: 80%;
+    }
+
+    .descDtl {
+        display: none;
+    }
+
+    .dot-container {
+        display: flex;
+        scale: 0.9;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profBody {
+        height: 750px;
+    }
+
+    .swal2-modal {
+        scale: 0.9;
+    }
+}
+
+/* phone */
+
+@media (max-width: 425px) {
+    .logo p {
+        display: none;
+    }
+
+    .main-header .nav-items {
+        gap: 10px
+    }
+
+    .dot-container {
+        scale: 0.8;
+    }
+
+    .listMain {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .carousel-slide {
+        height: 250px;
+    }
+
+    .carousel-slide .logoWm {
+        bottom: -80px;
+        left: -50px;
+        object-fit: contain;
+        scale: 0.8;
+    }
+
+    footer {
+        flex-direction: column-reverse;
+    }
+
+    .footLeft {
+        flex-direction: column;
+        padding: 5px 0px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .memberList {
+        font-size: 10px;
+    }
+
+    .cFoot .btn-Primary, .cFoot .favBtn, .cFoot .btn-Secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cFoot {
+        flex-direction: column-reverse;
+        margin: 10px 0px;
+        padding: 0px 20px;
+    }
+
+    .listMain {
+        gap: 15px;
+    }
+
+    .sellForm {
+        grid-template-columns: 1fr;
+    }
+
+    .regLogo {
+        width: 200px;
+    }
+
+    .introTitle h1 {
+        font-size: 23px;
+    }
+
+    .introTitle {
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+        height: 180px;
+        padding-top: 40px;
+    }
+
+    .profileBanner {
+        height: 200px;
+    }
+
+    .profile-photo {
+        width: 100px;
+    }
+
+    .profileCard {
+        width: 80%;
+    }
+
+    .profileBanner p {
+        margin: 0px;
+    }
+
+    .profileCard .btn-Primary {
+        width: 90%;
+    }
+
+    .profBody {
+        height: 700px;
+    }
+
+    .swal2-modal {
+        scale: 0.8;
+    }
+}
